@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Untuk Duo Kakak 💗</title>
+
+  <style>
+    body {
+      background: #81b5d4;
+      font-family: "Comic Sans MS", Arial, sans-serif;
+      text-align: center;
+      padding: 30px;
+    }
+
+    .card {
+      background: #f5bcbd;
+      border-radius: 30px;
+      padding: 28px;
+      max-width: 440px;
+      margin: auto;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    }
+
+    h1 {
+      color: #f2f0f0;
+    }
+
+    button {
+      background: #d4819f;
+      color: #f2f0f0;
+      border: none;
+      padding: 12px 22px;
+      border-radius: 25px;
+      font-size: 15px;
+      cursor: pointer;
+      margin: 6px;
+    }
+
+    button:hover {
+      background: #f2f0f0
+      ;
+    }
+
+    .pesan {
+      display: none;
+      margin-top: 18px;
+      animation: muncul 0.8s ease forwards;
+      color: #444;
+      line-height: 1.7;
+    }
+
+    @keyframes muncul {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .dog {
+      font-size: 40px;
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 13px;
+      color: #999;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <div class="dog">🐶🍁</div>
+    <h1>Happy Valentine</h1>
+
+    <p>
+      Halo <b>Kak Ace</b> & <b>Kak Cece</b> 🤍  
+      Ini web kecil buatan aku sendiri,  
+      temanya imut dikit anw ini awalnya mau make tema snoopy gituu.. tpi pusing banget kak, jadi tema nya gini aja gapapa ya?? yang penting kan isi nya hehe ^^
+    </p>
+
+    <button onclick="tampil('ace')">Buat Kak Ace 🤍</button>
+    <button onclick="tampil('cece')">Buat Kak Cece ✨</button>
+    <button onclick="tampil('akhir')">Terakhir 🤓</button>
+
+    <div id="ace" class="pesan">
+      Kak Ace 🤍  
+      Makasih buat perhatian kecil yang efeknya besar.  
+      Aku seneng bisa kenal kakak,  
+      dan ngerasa hangat walau dari hal-hal sederhana. Walaupun aku kenal kakak lebih lama daripada teman sekelas ku yang lain, tapi aku tetap senang karna kita bisa ada di titik ini, semoga kita punya banyak momen seru ke depannya ya kakk!
+    </div>
+
+    <div id="cece" class="pesan">
+      Kak Cece ✨  
+      Makasih buat senyum dan vibes ramahnya.  
+      Aku harap kita bisa makin akrab  
+      dan punya lebih banyak momen seru ke depannya. Anw itu bucket nya adalah bentuk terimakasih aku atas kebaikan kakak ke aku sekaligus ajakan buat mengakrab kan diri hehe . So glad to know you, and salam kenal dari aku rane si ketua gangster nya smanpa hehe!!
+    </div>
+
+    <div id="akhir" class="pesan">
+      Anw, web ini emang masih sederhana,
+yang bikin juga masih amatiran
+dan jelas butuh banyak belajar lagi.
+Tapi ini dibuat pake niat,
+dan aku seneng bisa ngasihnya ke kalian.
+Oh iya,
+jangan pernah bosan ya
+kalau aku sering todong kamera ke kakak berdua 📸
+because I’ve already told you before,
+I really like taking pictures of both of you—
+you guys are attractive and gorgeous af wkwk 😭✨
+jadi maafin aku kalau kameraku sering aktif.
+Happy Valentine 🤍
+semoga hal-hal baik dan hangat
+selalu ada di sekitar kalian berdua.
+      <br><br>
+      — ketua gangster🤓‼️
+    </div>
+
+    <div class="footer">
+      dibuat dari HP oleh ketua gangster and lil bit help from her partner🤓
+    </div>
+  </div>
+
+  <script>
+    function tampil(id) {
+      const semua = document.querySelectorAll(".pesan");
+      semua.forEach(p => p.style.display = "none");
+
+      document.getElementById(id).style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
