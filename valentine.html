@@ -1,140 +1,177 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>Untuk Duo Kakak 💗</title>
+<meta charset="UTF-8">
+<title>For My Favorite Duo Kakak 🤍</title>
 
-  <style>
-    body {
-      background: #81b5d4;
-      font-family: "Comic Sans MS", Arial, sans-serif;
-      text-align: center;
-      padding: 30px;
-    }
+<style>
+body {
+  background: #fffaf5;
+  font-family: 'Comic Sans MS', cursive;
+  text-align: center;
+  padding: 20px;
+}
 
-    .card {
-      background: #f5bcbd;
-      border-radius: 30px;
-      padding: 28px;
-      max-width: 440px;
-      margin: auto;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-    }
+h1 {
+  color: #ff8fab;
+}
 
-    h1 {
-      color: #f2f0f0;
-    }
+/* HEARTS */
+.hearts {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
 
-    button {
-      background: #d4819f;
-      color: #f2f0f0;
-      border: none;
-      padding: 12px 22px;
-      border-radius: 25px;
-      font-size: 15px;
-      cursor: pointer;
-      margin: 6px;
-    }
+.heart {
+  position: absolute;
+  top: -20px;
+  animation: fall linear forwards;
+  opacity: 0.7;
+}
 
-    button:hover {
-      background: #f2f0f0
-      ;
-    }
+@keyframes fall {
+  to {
+    transform: translateY(120vh);
+    opacity: 0;
+  }
+}
 
-    .pesan {
-      display: none;
-      margin-top: 18px;
-      animation: muncul 0.8s ease forwards;
-      color: #444;
-      line-height: 1.7;
-    }
+/* CONTENT */
+.text-box,
+.polaroid-container,
+footer,
+h1 {
+  position: relative;
+  z-index: 2;
+}
 
-    @keyframes muncul {
-      from {
-        opacity: 0;
-        transform: translateY(15px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+.text-box {
+  max-width: 500px;
+  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
 
-    .dog {
-      font-size: 40px;
-    }
+button {
+  background: #ff8fab;
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin: 6px;
+}
 
-    .footer {
-      margin-top: 20px;
-      font-size: 13px;
-      color: #999;
-    }
-  </style>
+.pesan {
+  display: none;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+/* POLAROID */
+.polaroid-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.polaroid {
+  background: white;
+  padding: 10px 10px 25px;
+  width: 160px;
+  box-shadow: 0 10px 18px rgba(0,0,0,0.15);
+}
+
+.polaroid img {
+  width: 100%;
+  border-radius: 6px;
+}
+</style>
 </head>
 
 <body>
 
-  <div class="card">
-    <div class="dog">🐶🍁</div>
-    <h1>Happy Valentine</h1>
+<div class="hearts"></div>
 
-    <p>
-      Halo <b>Kak Ace</b> & <b>Kak Cece</b> 🤍  
-      Ini web kecil buatan aku sendiri,  
-      temanya imut dikit anw ini awalnya mau make tema snoopy gituu.. tpi pusing banget kak, jadi tema nya gini aja gapapa ya?? yang penting kan isi nya hehe ^^
-    </p>
+<h1>Happy Valentine 🤍</h1>
 
-    <button onclick="tampil('ace')">Buat Kak Ace 🤍</button>
-    <button onclick="tampil('cece')">Buat Kak Cece ✨</button>
-    <button onclick="tampil('akhir')">Terakhir 🤓</button>
+<div class="text-box">
+  <button onclick="toggleAce()">Pesan Kak Ace 🤍</button>
+  <button onclick="toggleCece()">Pesan Kak Cece ✨</button>
+  <button onclick="toggleAku()">Pesan dari Aku 💗</button>
 
-    <div id="ace" class="pesan">
-      Kak Ace 🤍  
+  <p id="pesanAce" class="pesan">
+    Kak Ace 🤍  
       Makasih buat perhatian kecil yang efeknya besar.  
       Aku seneng bisa kenal kakak,  
-      dan ngerasa hangat walau dari hal-hal sederhana. Walaupun aku kenal kakak lebih lama daripada teman sekelas ku yang lain, tapi aku tetap senang karna kita bisa ada di titik ini, semoga kita punya banyak momen seru ke depannya ya kakk!
-    </div>
+      dan ngerasa hangat walau dari hal-hal sederhana. Walaupun aku kenal kakak lebih lama daripada teman sekelas ku yang lain, tapi aku tetap senang karna kita bisa ada di titik ini, semoga kita punya banyak momen seru ke depannya ya kakk!!
+  </p>
 
-    <div id="cece" class="pesan">
-      Kak Cece ✨  
+  <p id="pesanCece" class="pesan">
+    Kak Cece ✨  
       Makasih buat senyum dan vibes ramahnya.  
       Aku harap kita bisa makin akrab  
       dan punya lebih banyak momen seru ke depannya. Anw itu bucket nya adalah bentuk terimakasih aku atas kebaikan kakak ke aku sekaligus ajakan buat mengakrab kan diri hehe . So glad to know you, and salam kenal dari aku rane si ketua gangster nya smanpa hehe!!
-    </div>
+  </p>
 
-    <div id="akhir" class="pesan">
-      Anw, web ini emang masih sederhana,
-yang bikin juga masih amatiran
-dan jelas butuh banyak belajar lagi.
-Tapi ini dibuat pake niat,
-dan aku seneng bisa ngasihnya ke kalian.
-Oh iya,
-jangan pernah bosan ya
-kalau aku sering todong kamera ke kakak berdua 📸
-because I’ve already told you before,
-I really like taking pictures of both of you—
-you guys are attractive and gorgeous af wkwk 😭✨
-jadi maafin aku kalau kameraku sering aktif.
-Happy Valentine 🤍
-semoga hal-hal baik dan hangat
-selalu ada di sekitar kalian berdua.
-      <br><br>
-      — ketua gangster🤓‼️
-    </div>
+  <p id="pesanAku" class="pesan">
+   Anw.. web ini emang masih sederhana, yang bikin juga masih amatiran dan jelas butuh banyak belajar lagi. Tapi ini dibuat pake niat, dan aku seneng bisa ngasihnya ke kalian. Oh iya, jangan pernah bosan ya kalau aku sering todong kamera ke kakak berdua 📸 because I’ve already told you before, I really like taking pictures of both of you— you guys are attractive and gorgeous af wkwk 😭✨ jadi maafin aku kalau kameraku sering aktif. Happy Valentine 🤍 semoga hal-hal baik dan hangat selalu ada di sekitar kalian berdua.
 
-    <div class="footer">
-      dibuat dari HP oleh ketua gangster and lil bit help from her partner🤓
-    </div>
+— ketua gangster🤓‼️
+  </p>
+</div>
+
+<div class="polaroid-container">
+  <div class="polaroid">
+    <img src="img/snoopy1.png">
   </div>
+  <div class="polaroid">
+    <img src="img/snoopy2.png">
+  </div>
+</div>
 
-  <script>
-    function tampil(id) {
-      const semua = document.querySelectorAll(".pesan");
-      semua.forEach(p => p.style.display = "none");
+<footer>made with 💪 by ketua gangster and lil help from her partner 🦾</footer>
 
-      document.getElementById(id).style.display = "block";
-    }
-  </script>
+<script>
+function toggleAce() {
+  hideAll();
+  document.getElementById("pesanAce").style.display = "block";
+}
+
+function toggleCece() {
+  hideAll();
+  document.getElementById("pesanCece").style.display = "block";
+}
+
+function toggleAku() {
+  hideAll();
+  document.getElementById("pesanAku").style.display = "block";
+}
+
+function hideAll() {
+  document.querySelectorAll('.pesan')
+    .forEach(p => p.style.display = "none");
+}
+
+// hearts
+const hearts = document.querySelector('.hearts');
+setInterval(() => {
+  const h = document.createElement('div');
+  h.className = 'heart';
+  h.innerText = '💗';
+  h.style.left = Math.random() * 100 + 'vw';
+  h.style.fontSize = (12 + Math.random() * 18) + 'px';
+  h.style.animationDuration = (5 + Math.random() * 3) + 's';
+  hearts.appendChild(h);
+  setTimeout(() => h.remove(), 8000);
+}, 200);
+</script>
 
 </body>
 </html>
